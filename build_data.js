@@ -150,10 +150,9 @@ function readQAErrorIcons(faIcons, tnpIcons) {
   let qa = read(__dirname + '/data/qa_errors.json');
 
   for (let service in qa.services) {
-    for (let error in qa.services[service].errorTypes) {
+    for (let error in qa.services[service].errorIcons) {
       let icon = qa.services[service]
-        .errorTypes[error]
-        .icon;
+        .errorIcons[error];
 
       // fontawesome icon, remember for later
       if (/^fa[srb]-/.test(icon)) {
